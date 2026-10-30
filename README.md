@@ -72,6 +72,22 @@ python tools/apply_outfit.py jk制服
 
 或直接在桌宠窗口点 👗 打开衣橱，图形界面操作。
 
+## 社区 / Community
+
+遇到问题、想交流玩法、或需要 **一键整合包 / 远程部署 / 定制专属形象** 服务，欢迎加作者微信（备注 `GlassMate`）：
+
+<p align="center">
+  <img src="docs/wechat.jpg" width="240" alt="WeChat QR"/>
+</p>
+
+- 🐛 部署踩坑、Bug 反馈 → 提 [Issue](../../issues) 或加微信
+- 💬 玩家交流群 / 形象素材分享 → 加微信拉你进群
+- 🛠️ 付费服务：整合包（免配置解压即用）、远程部署、定制形象+音色克隆 → 微信详聊
+
+> Star ⭐ 这个项目是对作者最大的支持！
+
+**English**: Need a ready-to-run bundle, remote deployment, or a custom avatar/voice? Add the author on WeChat (QR above) with the note `GlassMate`. Bug reports are best filed as [Issues](../../issues).
+
 ## 免责声明
 
 本项目仅供学习交流。使用者须遵守当地法律法规：
@@ -83,3 +99,7 @@ python tools/apply_outfit.py jk制服
 
 MIT © 2026 GlassMate contributors
 上游组件遵循各自协议（LiveTalking MIT / ComfyUI GPL-3.0 / 各模型见其许可证）
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=whatmryang/glassmate-ai&type=Date)](https://star-history.com/#whatmryang/glassmate-ai&Date)
