@@ -56,6 +56,6 @@ jk2 = load_frames(r"D:\ai-companion\_seg_jk", step=5, maxn=24)
 frames += jk2[-14:]
 
 q = [f.quantize(colors=64, method=Image.MEDIANCUT) for f in frames]
-out = r"D:\GlassMate\docs\demo.gif"
+out = r"D:\GlasMate\docs\demo.gif"
 q[0].save(out, save_all=True, append_images=q[1:], duration=180, loop=0, optimize=True)
 print(f"saved {out}: {len(frames)} frames, {os.path.getsize(out)//1024}KB, ~{len(frames)*0.18:.0f}s")

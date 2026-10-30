@@ -271,7 +271,7 @@ class WardrobePanel(QWidget):
     def __init__(self, parent=None):
         super().__init__(parent, Qt.Window | Qt.FramelessWindowHint |
                          Qt.WindowStaysOnTopHint | Qt.Tool)
-        self.setWindowTitle("GlassMate衣橱")
+        self.setWindowTitle("GlasMate衣橱")
         self.setAttribute(Qt.WA_TranslucentBackground)
         self.setFixedSize(400, 560)
         outer = QVBoxLayout(self)
@@ -518,7 +518,7 @@ class PetWindow(QWidget):
 
         # 自动化触发: 轮询 trigger 文件 (录制演示/测试用)
         self._trigger_dir = os.environ.get(
-            "GLASSMATE_TRIGGER_DIR", os.path.join(BASE_DIR, "assets"))
+            "GLASMATE_TRIGGER_DIR", os.path.join(BASE_DIR, "assets"))
         self._trigger_timer = QTimer(self)
         self._trigger_timer.timeout.connect(self._poll_triggers)
         self._trigger_timer.start(500)

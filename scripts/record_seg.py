@@ -25,7 +25,7 @@ def main_hwnd():
 
 def panel_hwnd():
     for w in find_windows():
-        if w[1] in ('GlassMate衣橱', 'AI女友') and w[5] == 400 and w[7]:
+        if w[1] in ('GlasMate衣橱', 'AI女友') and w[5] == 400 and w[7]:
             return w[0]
     return None
 

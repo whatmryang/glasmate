@@ -1,4 +1,4 @@
-# GlassMate
+# GlasMate
 
 > 把想念的人，留在桌面上。
 
@@ -15,7 +15,7 @@ a character, a companion, or a gentle way to keep someone you miss close by.*
 ## 为什么做这个项目
 
 市面上的AI伴侣，要么是把你的每句话上传到别人服务器的云端产品，要么是冷冰冰的聊天框。
-我做 GlassMate，是想让它**真正属于你**：形象、声音、性格、记忆，全部在你自己的电脑上生成和运行，
+我做 GlasMate，是想让它**真正属于你**：形象、声音、性格、记忆，全部在你自己的电脑上生成和运行，
 拔了网线她依然在，不订阅、不限量、不看任何人的脸色。
 
 更重要的是——**它可以为你在乎的人定制。**
@@ -74,7 +74,7 @@ ollama create qwen2.5-abliterated -f Modelfile   # 见 docs/model.md
 pip install PySide6 opencv-python aiortc aiohttp numpy sounddevice
 
 # 4. 配置(环境变量或改 tools/gm_config.py)
-#    GLASSMATE_HOME=LiveTalking路径
+#    GLASMATE_HOME=LiveTalking路径
 
 # 5. 启动服务+桌宠
 python tools/apply_outfit.py  # 首次会构建默认avatar
@@ -97,7 +97,7 @@ python tools/apply_outfit.py jk制服
 
 ## 社区 / Community
 
-遇到问题、想交流玩法、或需要定制服务，欢迎加作者微信（备注 `GlassMate`）：
+遇到问题、想交流玩法、或需要定制服务，欢迎加作者微信（备注 `GlasMate`）：
 
 <p align="center">
   <img src="docs/wechat.jpg" width="240" alt="WeChat QR"/>
@@ -114,7 +114,7 @@ python tools/apply_outfit.py jk制服
 
 > Star ⭐ 这个项目是对作者最大的支持！
 
-**English**: We offer a ready-to-run bundle, remote deployment, custom avatar & voice cloning, and **premium high-fidelity customization** (large-VRAM GPUs / cloud compute: smarter LLMs, HD 3D digital humans, cinematic textures). Add the author on WeChat (QR above) with the note `GlassMate`. Bug reports are best filed as [Issues](../../issues).
+**English**: We offer a ready-to-run bundle, remote deployment, custom avatar & voice cloning, and **premium high-fidelity customization** (large-VRAM GPUs / cloud compute: smarter LLMs, HD 3D digital humans, cinematic textures). Add the author on WeChat (QR above) with the note `GlasMate`. Bug reports are best filed as [Issues](../../issues).
 
 ## 免责声明
 
@@ -125,9 +125,9 @@ python tools/apply_outfit.py jk制服
 
 ## License
 
-MIT © 2026 GlassMate contributors
+MIT © 2026 GlasMate contributors
 上游组件遵循各自协议（LiveTalking MIT / ComfyUI GPL-3.0 / 各模型见其许可证）
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=whatmryang/glassmate-ai&type=Date)](https://star-history.com/#whatmryang/glassmate-ai&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=whatmryang/glasmate&type=Date)](https://star-history.com/#whatmryang/glasmate&Date)

@@ -68,7 +68,7 @@ set LLM_SYSTEM_PROMPT=你是用户的AI伴侣，性格温柔，说话简短口�
 .venv\Scripts\python.exe app.py --transport webrtc --model wav2lip --avatar_id wav2lip256_green --llm_provider ollama --tts edgetts
 
 # 终端2: 桌宠
-cd GlassMate
+cd GlasMate
 python client\desktop_pet.py
 ```
 

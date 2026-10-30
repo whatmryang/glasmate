@@ -22,7 +22,7 @@ NEG = ("nsfw, nude, lowres, bad anatomy, bad hands, extra fingers, missing finge
 
 wf = {
   "1": {"class_type": "CheckpointLoaderSimple",
-        "inputs": {"ckpt_name": os.environ.get("GLASSMATE_CKPT", "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors")}},
+        "inputs": {"ckpt_name": os.environ.get("GLASMATE_CKPT", "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors")}},
   "2": {"class_type": "CLIPTextEncode",
         "inputs": {"text": POS, "clip": ["1", 1]}},
   "3": {"class_type": "CLIPTextEncode",

@@ -7,7 +7,7 @@ import time
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "tools"))
 from win_tool import find_windows, shot  # noqa: E402
 
-TITLE = os.environ.get("GLASSMATE_TITLE", "AI女友")
+TITLE = os.environ.get("GLASMATE_TITLE", "AI女友")
 wins = [w for w in find_windows() if w[1] == TITLE and w[5] != 400 and w[7]]
 if not wins:
     print("桌宠窗口未找到")
