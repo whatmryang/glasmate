@@ -97,7 +97,7 @@ python tools/apply_outfit.py jk制服
 
 ## 社区 / Community
 
-遇到问题、想交流玩法、或需要 **一键整合包 / 远程部署 / 定制专属形象** 服务，欢迎加作者微信（备注 `GlassMate`）：
+遇到问题、想交流玩法、或需要定制服务，欢迎加作者微信（备注 `GlassMate`）：
 
 <p align="center">
   <img src="docs/wechat.jpg" width="240" alt="WeChat QR"/>
@@ -105,11 +105,16 @@ python tools/apply_outfit.py jk制服
 
 - 🐛 部署踩坑、Bug 反馈 → 提 [Issue](../../issues) 或加微信
 - 💬 玩家交流群 / 形象素材分享 → 加微信拉你进群
-- 🛠️ 付费服务：整合包（免配置解压即用）、远程部署、定制形象+音色克隆 → 微信详聊
+- 📦 一键整合包：免配置解压即用，含模型自动下载器 → 微信详聊
+- 🛠️ 远程部署：装到你电脑上，装好教会为止 → 微信详聊
+- 🎨 定制专属形象 + 音色克隆：按你的照片/描述定制 → 微信详聊
+- 💎 **高配定制**：如果你有大显存显卡（16G/24G+）或愿意上云端算力，可以定制更高品质的形象——
+  更大参数模型（对话更聪明）、高清3D数字人（Tripo高精度+Blender渲染转身视频）、
+  影视级贴图、更自然的动作与表情 → 微信详聊
 
 > Star ⭐ 这个项目是对作者最大的支持！
 
-**English**: Need a ready-to-run bundle, remote deployment, or a custom avatar/voice? Add the author on WeChat (QR above) with the note `GlassMate`. Bug reports are best filed as [Issues](../../issues).
+**English**: We offer a ready-to-run bundle, remote deployment, custom avatar & voice cloning, and **premium high-fidelity customization** (large-VRAM GPUs / cloud compute: smarter LLMs, HD 3D digital humans, cinematic textures). Add the author on WeChat (QR above) with the note `GlassMate`. Bug reports are best filed as [Issues](../../issues).
 
 ## 免责声明
 
