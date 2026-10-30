@@ -1,4 +1,4 @@
-# GlassMate 玻璃伴侣
+# GlassMate
 
 > 把想念的人，留在桌面上。
 
