@@ -26,10 +26,8 @@ from PySide6.QtWidgets import (
     QLineEdit, QPushButton, QFrame, QScrollArea, QGridLayout,
 )
 
-BASE_DIR = os.environ.get("GLASSMATE_HOME_ROOT") or \
-    os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-WARDROBE_DIR = os.environ.get(
-    "GLASSMATE_WARDROBE", os.path.join(BASE_DIR, "wardrobe", "outfits"))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+WARDROBE_DIR = os.path.join(BASE_DIR, "wardrobe", "outfits")
 
 
 class Bridge(QObject):
@@ -273,6 +271,7 @@ class WardrobePanel(QWidget):
     def __init__(self, parent=None):
         super().__init__(parent, Qt.Window | Qt.FramelessWindowHint |
                          Qt.WindowStaysOnTopHint | Qt.Tool)
+        self.setWindowTitle("GlassMate衣橱")
         self.setAttribute(Qt.WA_TranslucentBackground)
         self.setFixedSize(400, 560)
         outer = QVBoxLayout(self)
@@ -517,6 +516,38 @@ class PetWindow(QWidget):
         self._drag = None
         self.apply_zoom()
 
+        # 自动化触发: 轮询 trigger 文件 (录制演示/测试用)
+        self._trigger_dir = os.environ.get(
+            "GLASSMATE_TRIGGER_DIR", os.path.join(BASE_DIR, "assets"))
+        self._trigger_timer = QTimer(self)
+        self._trigger_timer.timeout.connect(self._poll_triggers)
+        self._trigger_timer.start(500)
+
+    def _poll_triggers(self):
+        import glob as _glob
+        try:
+            for tp in _glob.glob(os.path.join(self._trigger_dir, "_trigger_*")):
+                name = os.path.basename(tp)
+                try:
+                    arg = open(tp, encoding="utf-8").read().strip()
+                except Exception:
+                    arg = ""
+                os.remove(tp)
+                if name == "_trigger_wardrobe":
+                    self.open_wardrobe()
+                elif name == "_trigger_wardrobe_close":
+                    if self.wardrobe:
+                        self.wardrobe.hide()
+                elif name == "_trigger_send":
+                    if arg:
+                        self.input.setText(arg)
+                        self.send_msg()
+                elif name == "_trigger_pick":
+                    if arg:
+                        self.apply_outfit(arg)
+        except Exception:
+            pass
+
     # ----- 尺寸 -----
     def apply_zoom(self):
         w = max(160, int(self.args.width * self.zoom))
@@ -536,6 +567,9 @@ class PetWindow(QWidget):
         e.accept()
 
     def keyPressEvent(self, e):
+        if e.key() == Qt.Key_W and e.modifiers() == Qt.ControlModifier:
+            self.open_wardrobe()
+            return
         if e.key() in (Qt.Key_Plus, Qt.Key_Equal):
             self.set_zoom(self.zoom * 1.15)
         elif e.key() in (Qt.Key_Minus, Qt.Key_Underscore):

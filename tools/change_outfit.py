@@ -180,13 +180,12 @@ def main():
     to_greenscreen(preview, final)
     print("绿幕终图:", final)
 
-    # 自动生成衣橱缩略图
+    # 自动生成衣橱缩略图(用LiveTalking venv的python, 系统python可能无cv2)
     try:
-        sys.path.insert(0, BASE_DIR)
-        from make_thumbnail import make_thumb
-        thumb = os.path.join(d, "thumbnail.png")
-        make_thumb(final, thumb)
-        print("缩略图:", thumb)
+        r = subprocess.run(
+            [PY_LT, os.path.join(BASE_DIR, "tools", "make_thumbnail.py"), d],
+            capture_output=True, text=True, encoding="utf-8", errors="replace")
+        print("缩略图:", r.stdout.strip() or r.stderr.strip()[:200])
     except Exception as e:
         print("缩略图生成失败(不影响):", e)
 
